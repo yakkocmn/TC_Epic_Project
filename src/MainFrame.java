@@ -1,4 +1,4 @@
 
 public class MainFrame {
-//ted is my bae and should totes buy me binding of isaac rebirth
+//u stink almost like how much a stink bug stinks
 }
