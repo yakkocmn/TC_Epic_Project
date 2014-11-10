@@ -5,7 +5,7 @@ public class Card
 {
 	private int cardType;//1-15 (ace=1)
 	private char symbol; //Spade/Club/Heart/Diamond
-	private Color cardColor;
+	private Color cardColor;//Red || Black
 	
 	public Card(int numb, char symb, Color color)
 	{
