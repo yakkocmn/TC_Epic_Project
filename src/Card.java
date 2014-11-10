@@ -3,11 +3,11 @@ import java.awt.Color;
 
 public class Card 
 {
-	private int cardType;//1-15 (ace=1)
-	private char symbol; //Spade/Club/Heart/Diamond
+	private int cardType;//1-13 (ace=1)
+	private String symbol; //Spade/Club/Heart/Diamond
 	private Color cardColor;//Red || Black
 	
-	public Card(int numb, char symb, Color color)
+	public Card(int numb, String symb, Color color)
 	{
 		cardType = numb;
 		symbol = symb;
@@ -19,7 +19,7 @@ public class Card
 		return cardType;
 	}
 	
-	public char getSymbol()
+	public String getSymbol()
 	{
 		return symbol;
 	}
@@ -34,7 +34,7 @@ public class Card
 		cardType = newType;
 	}
 	
-	public void setSymbol(char newSymbol)
+	public void setSymbol(String newSymbol)
 	{
 		symbol = newSymbol;
 	}
