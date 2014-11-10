@@ -3,8 +3,8 @@ import java.awt.Color;
 
 public class Card 
 {
-	private int cardType;
-	private char symbol;
+	private int cardType;//1-15 (ace=1)
+	private char symbol; //Spade/Club/Heart/Diamond
 	private Color cardColor;
 	
 	public Card(int numb, char symb, Color color)
