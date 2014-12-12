@@ -30,9 +30,8 @@ public static void main(String[] args)
 //	JPanel panny = new JPanel(new BorderLayout());
 	CardTable tabby = new CardTable();
 	/////
-	JFrame frame = new JFrame("CARDS BABY");
+	JFrame frame = new JFrame("Chris and Ted's Card Extravaganza");
 	JTextArea textPanel = new JTextArea("the best card game on the planet");
-	textPanel.
 	textPanel.setEditable(false);
 	
 	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
