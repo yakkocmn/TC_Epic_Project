@@ -14,6 +14,19 @@ public class Card
 		cardColor = color;
 	}
 	
+	public String toString()
+	{
+		String currSymb;
+		
+		if(symbol.equalsIgnoreCase("Spade"))
+			currSymb = "\u2660";
+		
+		
+			
+		String boop = (String)cardType + " " + symbol
+		return boop;
+	}
+	
 	public int getCardType()
 	{
 		return cardType;

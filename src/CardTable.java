@@ -16,11 +16,19 @@ public class CardTable extends JPanel
 		deck.shuffle();
 	}
 	
+	public Deck getDeck()
+	{
+		return deck;
+	}
+	
 	public Card getCardFromDeck(int want)
 	{
 		return deck.getCard(want);
 	}
-	
+	public void displayCard(Card)
+	{
+		//will display card in box in g
+	}
 	public void paintComponent(Graphics g)
 	{
 		Image img = null;
