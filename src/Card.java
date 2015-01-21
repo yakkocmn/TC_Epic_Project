@@ -3,33 +3,48 @@ import java.awt.Color;
 
 public class Card 
 {
-	private int cardType;//1-13 (ace=1)
+	private int cardNumber;//1-13 (ace=1)
+	private String cardType; //2-10, jack, queen, king, ace
 	private String symbol; //Spade/Club/Heart/Diamond
+	private String symbolIcon;
 	private Color cardColor;//Red || Black
 	
 	public Card(int numb, String symb, Color color)
 	{
-		cardType = numb;
+		cardNumber = numb;
 		symbol = symb;
 		cardColor = color;
+		
+		if(symbol.equalsIgnoreCase("Spade"))
+			symbolIcon = "\u2660";
+		else if(symbol.equalsIgnoreCase("Heart"))
+			symbolIcon = "\u2665";
+		else if(symbol.equalsIgnoreCase("Club"))
+			symbolIcon = "\u2663";
+		else if(symbol.equalsIgnoreCase("Diamond"))
+			symbolIcon = "\u2666";
+		
+		if(cardNumber == 11)
+			cardType = "Jack";
+		else if(cardNumber == 12)
+			cardType = "Queen";
+		else if(cardNumber == 13)
+			cardType = "King";
+		else if(cardNumber ==1)
+			cardType = "Ace";
+		else
+			cardType = cardNumber + "";
 	}
 	
 	public String toString()
-	{
-		String currSymb;
-		
-		if(symbol.equalsIgnoreCase("Spade"))
-			currSymb = "\u2660";
-		
-		
-			
-		String boop = (String)cardType + " " + symbol
+	{	
+		String boop = cardType + " " + symbolIcon + " " + cardColor;
 		return boop;
 	}
 	
-	public int getCardType()
+	public int getCardNumber()
 	{
-		return cardType;
+		return cardNumber;
 	}
 	
 	public String getSymbol()
