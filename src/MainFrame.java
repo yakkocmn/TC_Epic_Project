@@ -33,7 +33,7 @@ public static void main(String[] args)
 	
 //	JPanel panny = new JPanel(new BorderLayout());
 	/////
-	JFrame frame = new JFrame("Chris and Ted's Card Extravaganza");
+	JFrame frame = new JFrame("Ted and Chris' Card Extravaganza");
 	JTextArea textPanel = new JTextArea("the best card game on the planet");
 	textPanel.setEditable(false);
 	
