@@ -19,6 +19,7 @@ import javax.swing.JTextPane;
 public class MainFrame
 {
 	private static int currCard;
+	private static CardTable tabby = new CardTable();
 
 
 public MainFrame()
@@ -31,7 +32,6 @@ public static void main(String[] args)
 	
 	
 //	JPanel panny = new JPanel(new BorderLayout());
-	CardTable tabby = new CardTable();
 	/////
 	JFrame frame = new JFrame("Chris and Ted's Card Extravaganza");
 	JTextArea textPanel = new JTextArea("the best card game on the planet");
@@ -56,7 +56,7 @@ public static void main(String[] args)
 	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	frame.getContentPane().add(tabby, BorderLayout.CENTER);
 	frame.getContentPane().add(textPanel, BorderLayout.NORTH);
-	frame.getContentPane().add(buttonPane, BorderLayout.CENTER);
+	frame.getContentPane().add(buttonPane, BorderLayout.SOUTH);
 	frame.setSize(800, 576);
 	frame.setVisible(true);
 	/////

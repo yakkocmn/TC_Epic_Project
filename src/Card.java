@@ -59,7 +59,7 @@ public class Card
 	
 	public void setType(int newType)
 	{
-		cardType = newType;
+		cardType = newType + "";
 	}
 	
 	public void setSymbol(String newSymbol)

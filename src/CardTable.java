@@ -9,6 +9,8 @@ import javax.swing.JPanel;
 public class CardTable extends JPanel 
 {
 	private Deck deck;
+	private boolean displayingCard=false;
+	private Card displayCard;
 	
 	public CardTable()
 	{
@@ -25,9 +27,10 @@ public class CardTable extends JPanel
 	{
 		return deck.getCard(want);
 	}
-	public void displayCard(Card)
+	public void displayCard(Card card)
 	{
-		//will display card in box in g
+		displayingCard=true;
+		displayCard = deck.getCard(card);
 	}
 	public void paintComponent(Graphics g)
 	{
@@ -35,6 +38,10 @@ public class CardTable extends JPanel
 		try
 		{
 			img = ImageIO.read(new File("pokertable.jpg"));
+//			if(displayingCard)
+//			{
+//				g.drawRect(100, 100, 120, 300);
+//			}
 		}
 		
 		catch(Exception e)
@@ -44,6 +51,7 @@ public class CardTable extends JPanel
 		
 	    super.paintComponent(g);
 	    g.drawImage(img, 0, 0, null);
+	    g.drawString(displayCard.toString(), 0, 0);
 	}
 
 }

@@ -46,7 +46,12 @@ public class Deck {
 	{
 		Card desiredCard = cards.get(place);
 		return desiredCard;
-		
+	}
+	
+	public Card getCard(Card card)
+	{
+		Card desiredCard = card;
+		return desiredCard;
 	}
 	
 
