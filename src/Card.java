@@ -38,7 +38,7 @@ public class Card
 	
 	public String toString()
 	{	
-		String boop = cardType + " " + symbolIcon + " " + cardColor;
+		String boop = cardType + " " + symbolIcon;
 		return boop;
 	}
 	
