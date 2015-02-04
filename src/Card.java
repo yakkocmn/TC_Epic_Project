@@ -3,7 +3,7 @@ import java.awt.Color;
 
 public class Card 
 {
-	private int cardNumber;//1-13 (ace=1)
+	private int cardNumber;//1-13 (ace=1) //hi chris
 	private String cardType; //2-10, jack, queen, king, ace
 	private String symbol; //Spade/Club/Heart/Diamond
 	private String symbolIcon;
