@@ -57,7 +57,7 @@ public class Deck {
 		return desiredCard;
 	}
 	
-	public void 
+	//public void 
 	
 
 }

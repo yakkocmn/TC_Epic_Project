@@ -35,10 +35,12 @@ public class CardTable extends JPanel
 	}
 	public void paintComponent(Graphics g)
 	{
-		Image img = null;
+		Image img = null,img2=null;
 		try
 		{
 			img = ImageIO.read(new File("pokertable.jpg"));
+			img2 = ImageIO.read(new File("Card_Back.png"));
+			
 	
 		}
 		
@@ -49,6 +51,7 @@ public class CardTable extends JPanel
 		
 	    super.paintComponent(g);
 	    g.drawImage(img, 0, 0, null);
+	    g.drawImage(img2,300,100,null);
 		if(displayingCard)
 		{
 			//System.out.println(displayingCard);
