@@ -6,10 +6,13 @@ import java.util.Collections;
 public class Deck {
 	
 	private ArrayList<Card> cards;
+	private ArrayList<Card> removedCards;
 	
 	public Deck()
 	{
 		cards = new ArrayList<Card>();
+		removedCards = new ArrayList<Card>();
+		
 		for(int i = 1; i <= 13; i++)
 		{
 			Card currCard = new Card(i, "club", Color.BLACK);
@@ -53,6 +56,8 @@ public class Deck {
 		Card desiredCard = card;
 		return desiredCard;
 	}
+	
+	public void 
 	
 
 }

@@ -37,26 +37,43 @@ public static void main(String[] args)
 	JTextArea textPanel = new JTextArea("the best card game on the planet");
 	textPanel.setEditable(false);
 	
-	JButton shuffle = new JButton("Shuffle");
+	JButton draw = new JButton("Draw Top Card");
 	JPanel buttonPane = new JPanel();
 	buttonPane.setSize(2,2);
-	buttonPane.add(shuffle);
+	buttonPane.add(draw);
 	
-	shuffle.addActionListener(new ActionListener() 
+	draw.addActionListener(new ActionListener() 
 	{ 
         public void actionPerformed(ActionEvent e)
         {
             System.out.println("You clicked the button");
             tabby.displayCard(tabby.getDeck().getCard(currCard));
-            currCard++;
         }
     });   
+	
+	JButton shuffle = new JButton("Shuffle");
+	JPanel buttonPane2 = new JPanel();
+	buttonPane2.setSize(2,2);
+	buttonPane2.add(draw);
+	buttonPane2.add(shuffle);
+	
+	shuffle.addActionListener(new ActionListener() 
+	{ 
+        public void actionPerformed(ActionEvent e)
+        {
+            System.out.println("You shuffled the deck");
+            tabby.getDeck().shuffle();
+//            tabby.displayCard(tabby.getDeck().getCard(currCard));
+        }
+    });   
+	
 	
 	
 	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	frame.getContentPane().add(tabby, BorderLayout.CENTER);
 	frame.getContentPane().add(textPanel, BorderLayout.NORTH);
 	frame.getContentPane().add(buttonPane, BorderLayout.SOUTH);
+	frame.getContentPane().add(buttonPane2, BorderLayout.SOUTH);
 	frame.setSize(800, 576);
 	frame.setVisible(true);
 	/////
