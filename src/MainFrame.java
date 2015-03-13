@@ -46,8 +46,19 @@ public static void main(String[] args)
 	{ 
         public void actionPerformed(ActionEvent e)
         {
-            System.out.println("You clicked the button");
+            //System.out.println("You clicked the button");
             tabby.displayCard(tabby.getDeck().getCard(currCard));
+            if(currCard<52)
+            	currCard++;
+            else
+            {
+            	String input;
+            	input = JOptionPane.showInputDialog(null,"Do you wish to reshuffle? (y/n)");
+                tabby.getDeck().shuffle();
+            	System.out.println("SHUFFLED BECAUSE EXCEEDED CARD LIMIT");
+            	//shuffle pls
+            }
+            
         }
     });   
 	

@@ -35,10 +35,12 @@ public class CardTable extends JPanel
 	}
 	public void paintComponent(Graphics g)
 	{
-		Image img = null;
+		Image img = null,img2=null;
 		try
 		{
 			img = ImageIO.read(new File("pokertable.jpg"));
+			img2 = ImageIO.read(new File("Card_Back.png"));
+			
 	
 		}
 		
@@ -49,13 +51,14 @@ public class CardTable extends JPanel
 		
 	    super.paintComponent(g);
 	    g.drawImage(img, 0, 0, null);
+	    g.drawImage(img2,500,100,null);
 		if(displayingCard)
 		{
 			//System.out.println(displayingCard);
 			g.setColor(Color.white);
-			g.fillRect(300, 100, 220, 300);
+			g.fillRect(200, 100, 220, 300);
 			g.setColor(displayCard.getColor());
-		    g.drawString(displayCard.toString(), 310, 140);
+		    g.drawString(displayCard.toString(), 220, 140);
 			
 		}
 	    
