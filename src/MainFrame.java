@@ -48,15 +48,21 @@ public static void main(String[] args)
         {
             //System.out.println("You clicked the button");
             tabby.displayCard(tabby.getDeck().getCard(currCard));
-            if(currCard<52)
+            if(currCard<51)
             	currCard++;
             else
             {
             	String input;
             	input = JOptionPane.showInputDialog(null,"Do you wish to reshuffle? (y/n)");
-                tabby.getDeck().shuffle();
-            	System.out.println("SHUFFLED BECAUSE EXCEEDED CARD LIMIT");
-            	//shuffle pls
+            	if(input.equalsIgnoreCase("y")||input.equalsIgnoreCase("yes"))
+            	{	
+            		tabby.getDeck().shuffle();
+            		currCard=0;
+            		System.out.println("SHUFFLED BECAUSE EXCEEDED CARD LIMIT");
+            		//clear the current card off the board...
+            	}
+            	else
+            		System.exit(1);
             }
             
         }

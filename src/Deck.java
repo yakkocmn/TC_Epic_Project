@@ -48,12 +48,16 @@ public class Deck {
 	public Card getCard(int place)
 	{
 		Card desiredCard = cards.get(place);
+		cards.remove(place);
+		removedCards.add(desiredCard);
 		return desiredCard;
 	}
 	
 	public Card getCard(Card card)
 	{
 		Card desiredCard = card;
+		cards.remove(card);
+		removedCards.add(desiredCard);
 		return desiredCard;
 	}
 	

@@ -25,13 +25,13 @@ public class Card
 			symbolIcon = "\u2666";
 		
 		if(cardNumber == 11)
-			cardType = "Jack";
+			cardType = "J";
 		else if(cardNumber == 12)
-			cardType = "Queen";
+			cardType = "Q";
 		else if(cardNumber == 13)
-			cardType = "King";
+			cardType = "K";
 		else if(cardNumber ==1)
-			cardType = "Ace";
+			cardType = "A";
 		else
 			cardType = cardNumber + "";
 	}
