@@ -41,6 +41,8 @@ public class Deck {
 	
 	public void shuffle()
 	{
+		cards.addAll(removedCards);
+		removedCards.clear();
 		 Collections.shuffle(cards);
 	        System.out.println("shuffle successful");
 	}
@@ -59,6 +61,11 @@ public class Deck {
 		cards.remove(card);
 		removedCards.add(desiredCard);
 		return desiredCard;
+	}
+	
+	public int getNumberOfCards()
+	{
+		return cards.size();
 	}
 	
 	//public void 

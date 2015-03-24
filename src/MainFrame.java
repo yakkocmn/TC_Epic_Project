@@ -47,9 +47,14 @@ public static void main(String[] args)
         public void actionPerformed(ActionEvent e)
         {
             //System.out.println("You clicked the button");
-            tabby.displayCard(tabby.getDeck().getCard(currCard));
-            if(currCard<51)
+            tabby.displayCard(tabby.getDeck().getCard(1));
+            if(currCard<=50)
+            {
             	currCard++;
+            	System.out.println(tabby.getDeck().getNumberOfCards());
+            	System.out.println(currCard);
+            }
+            
             else
             {
             	String input;
@@ -61,8 +66,8 @@ public static void main(String[] args)
             		System.out.println("SHUFFLED BECAUSE EXCEEDED CARD LIMIT");
             		//clear the current card off the board...
             	}
-            	else
-            		System.exit(1);
+//            	else
+//            		System.exit(1);
             }
             
         }
