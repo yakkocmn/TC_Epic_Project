@@ -36,6 +36,7 @@ public class Deck {
 			Card currCard = new Card(i, "diamond", Color.RED);
 			cards.add(currCard);
 		}
+		//System.out.println(this.getNumberOfCards());
 		
 	}
 	

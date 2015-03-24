@@ -44,12 +44,15 @@ public static void main(String[] args)
 	
 	draw.addActionListener(new ActionListener() 
 	{ 
+		
         public void actionPerformed(ActionEvent e)
         {
             //System.out.println("You clicked the button");
             tabby.displayCard(tabby.getDeck().getCard(1));
             if(currCard<=50)
             {
+            	//should this be 51?
+            	
             	currCard++;
             	System.out.println(tabby.getDeck().getNumberOfCards());
             	System.out.println(currCard);
@@ -62,7 +65,7 @@ public static void main(String[] args)
             	if(input.equalsIgnoreCase("y")||input.equalsIgnoreCase("yes"))
             	{	
             		tabby.getDeck().shuffle();
-            		currCard=0;
+            		currCard=1;
             		System.out.println("SHUFFLED BECAUSE EXCEEDED CARD LIMIT");
             		//clear the current card off the board...
             	}
@@ -85,6 +88,7 @@ public static void main(String[] args)
         {
             System.out.println("You shuffled the deck");
             tabby.getDeck().shuffle();
+            currCard=1;
 //            tabby.displayCard(tabby.getDeck().getCard(currCard));
         }
     });   
