@@ -36,15 +36,44 @@ public class Deck {
 			Card currCard = new Card(i, "diamond", Color.RED);
 			cards.add(currCard);
 		}
+		//System.out.println(this.getNumberOfCards());
 		
 	}
 	
 	public void shuffle()
 	{
-		cards.addAll(removedCards);
-		removedCards.clear();
-		 Collections.shuffle(cards);
-	        System.out.println("shuffle successful");
+//		cards.addAll(removedCards);
+//		removedCards.clear();
+//		 Collections.shuffle(cards);
+		cards.clear();
+		for(int i = 1; i <= 13; i++)
+		{
+			Card currCard = new Card(i, "club", Color.BLACK);
+			cards.add(currCard);
+		}
+		
+		for(int i = 1; i <= 13; i++)
+		{
+			Card currCard = new Card(i, "spade", Color.BLACK);
+			cards.add(currCard);
+		}
+		
+		for(int i = 1; i <= 13; i++)
+		{
+			Card currCard = new Card(i, "heart", Color.RED);
+			cards.add(currCard);
+		}
+		
+		for(int i = 1; i <= 13; i++)
+		{
+			Card currCard = new Card(i, "diamond", Color.RED);
+			cards.add(currCard);
+		}
+		 if(getNumberOfCards()==52)
+			 System.out.println("shuffle successful");
+		 else
+			 System.out.println("shuffle NOT successful");
+	        
 	}
 	
 	public Card getCard(int place)

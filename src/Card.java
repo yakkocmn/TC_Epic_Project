@@ -23,6 +23,8 @@ public class Card
 			symbolIcon = "\u2663";
 		else if(symbol.equalsIgnoreCase("Diamond"))
 			symbolIcon = "\u2666";
+		else
+			symbolIcon = "ERROR";
 		
 		if(cardNumber == 11)
 			cardType = "J";
@@ -34,6 +36,7 @@ public class Card
 			cardType = "A";
 		else
 			cardType = cardNumber + "";
+		
 	}
 	
 	public String toString()
