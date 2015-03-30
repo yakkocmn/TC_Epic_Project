@@ -46,7 +46,6 @@ public class Deck {
 //		cards.addAll(removedCards);
 //		removedCards.clear();
 //		 Collections.shuffle(cards);
-<<<<<<< HEAD
 		
 		ArrayList<Card> empty = new ArrayList<Card>();
 		for(int i=0;cards.size()<0 && i<52;i++)
@@ -60,7 +59,6 @@ public class Deck {
 		
 		cards=empty;
 		empty.clear();
-=======
 		cards.clear();
 		for(int i = 1; i <= 13; i++)
 		{
@@ -85,7 +83,6 @@ public class Deck {
 			Card currCard = new Card(i, "diamond", Color.RED);
 			cards.add(currCard);
 		}
->>>>>>> 269037bcc8459958e7a969a06e08508f27cb8a81
 		 if(getNumberOfCards()==52)
 			 System.out.println("shuffle successful");
 		 else
