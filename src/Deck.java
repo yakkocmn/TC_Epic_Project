@@ -1,6 +1,7 @@
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 
 
 public class Deck {
@@ -36,15 +37,33 @@ public class Deck {
 			Card currCard = new Card(i, "diamond", Color.RED);
 			cards.add(currCard);
 		}
+		//System.out.println(this.getNumberOfCards());
 		
 	}
 	
 	public void shuffle()
 	{
-		cards.addAll(removedCards);
-		removedCards.clear();
-		 Collections.shuffle(cards);
-	        System.out.println("shuffle successful");
+//		cards.addAll(removedCards);
+//		removedCards.clear();
+//		 Collections.shuffle(cards);
+		
+		ArrayList<Card> empty = new ArrayList<Card>();
+		for(int i=0;cards.size()<0 && i<52;i++)
+		{
+			
+		double random = (Math.random()*cards.size()+1);
+		int val = (int)random;
+		empty.add(cards.get(val));
+		cards.remove(val);
+		}
+		
+		cards=empty;
+		empty.clear();
+		 if(getNumberOfCards()==52)
+			 System.out.println("shuffle successful");
+		 else
+			 System.out.println("shuffle NOT successful");
+	        
 	}
 	
 	public Card getCard(int place)
