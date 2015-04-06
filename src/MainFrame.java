@@ -93,6 +93,23 @@ public static void main(String[] args)
         }
     });   
 	
+	JButton fshuffle = new JButton("Full Shuffle");
+	JPanel fbuttonPane2 = new JPanel();
+	fbuttonPane2.setSize(2,2);
+	fbuttonPane2.add(draw);
+	fbuttonPane2.add(fshuffle);
+	
+	fshuffle.addActionListener(new ActionListener() 
+	{ 
+        public void actionPerformed(ActionEvent e)
+        {
+            System.out.println("You FULL shuffled the deck");
+            tabby.getDeck().fshuffle();
+            currCard=1;
+//            tabby.displayCard(tabby.getDeck().getCard(currCard));
+        }
+    });   
+	
 	
 	
 	frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
