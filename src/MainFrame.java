@@ -48,14 +48,14 @@ public static void main(String[] args)
         public void actionPerformed(ActionEvent e)
         {
             //System.out.println("You clicked the button");
-            tabby.displayCard(tabby.getDeck().getCard(1));
+            tabby.displayCard(tabby.getDeck().getCard(0));
             if(currCard<=50)
             {
             	//should this be 51?
             	
-            	currCard++;
-            	System.out.println(tabby.getDeck().getNumberOfCards());
+            	System.out.println(tabby.getDeck().getNumberOfCards()); 
             	System.out.println(currCard);
+            	currCard++;
             }
             
             else
